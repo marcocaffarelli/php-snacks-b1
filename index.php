@@ -54,6 +54,7 @@ conosciamo nella documentazione) che:
 Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 */
 
+//Variabili
 $name = $_GET["name"];
 $email = $_GET["email"];
 $age = $_GET["age"];
@@ -61,14 +62,11 @@ $age = $_GET["age"];
 
 
 /*
-strlen($name) > 3 = se il nome è formato da più di 3 lettere
-strpos($email, "@") !== false && strpos($email, ".") !== false = l'email include una chiocciola e un punto
+CONDIZIONI DEL SECONDO ESERCIZIO
+strlen($name) > 3 = verifica se il nome è formato da più di 3 lettere
+strpos($email, "@") !== false && strpos($email, ".") !== false = verifica se l'email include una chiocciola e un punto
+is_numeric($age) == "1") = verifica se age è un numero
 */
-if (strlen($name) > 3 && strpos($email, "@") !== false && strpos($email, ".") !== false) {
-    echo ("Accesso riuscito");
-} else {
-    echo ("Accesso negato");
-};
 
 ?>
 
@@ -91,6 +89,13 @@ if (strlen($name) > 3 && strpos($email, "@") !== false && strpos($email, ".") !=
         ?></ul>
 
         <!-- ESERCIZIO NUMERO 2 -->
-        <h2></h2>
+        <h2>Controllo Accesso</h2>
+        <h3><?php
+            if (strlen($name) > 3 && strpos($email, "@") !== false && strpos($email, ".") !== false && is_numeric($age) == "1") {
+                echo ("Accesso riuscito");
+            } else {
+                echo ("Accesso negato");
+            };
+        ?></h3>
     </body>
 </html>
