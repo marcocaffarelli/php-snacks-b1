@@ -59,7 +59,11 @@ $email = $_GET["email"];
 $age = $_GET["age"];
 
 //var_dump($name, $email, $age);
-
+if (strlen($name) > 3) {
+    echo ("true");
+} else {
+    echo ("false");
+};
 
 ?>
 
