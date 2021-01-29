@@ -6,40 +6,41 @@ Stampiamo a schermo tutte le partite con questo schema:
 Olimpia Milano - Cantù | 55 - 60
 */
 $matches = [
-    "Match" => [
+    [
         "Home" => "Reggiana",
-        "Visitors" => "Trento", 
+        "Visitors" => "Trento",
         "Risultato" => "83 - 74",
     ],
-    "Match1" => [
+    [
         "Home" => "Bologna",
-        "Visitors" => "Brescia", 
+        "Visitors" => "Brescia",
         "Risultato" => "89 - 90",
     ],
-    "Match2" => [
+    [
         "Home" => "Universo Treviso",
-        "Visitors" => "Olimpia Milano", 
+        "Visitors" => "Olimpia Milano",
         "Risultato" => "77 - 82",
     ],
-    "Match3" => [
+    [
         "Home" => "VL Pesaro",
-        "Visitors" => "Cantù", 
+        "Visitors" => "Cantù",
         "Risultato" => "107 - 83",
     ],
-    "Match4" => [
+    [
         "Home" => "Venezia",
-        "Visitors" => "Cremona", 
+        "Visitors" => "Cremona",
         "Risultato" => "88 - 84",
     ],
-    "Match5" => [
+    [
         "Home" => "Trieste",
-        "Visitors" => "Dinamo Sassari", 
+        "Visitors" => "Dinamo Sassari",
         "Risultato" => "82 - 103",
     ],
 ];
 
 //var_dump($matches);
 //var_dump($matches["Match"])
+
 
 
 
@@ -64,6 +65,13 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
         <title>Php-snacks-b1</title>
     </head>
     <body>
-        <h1><?php echo $matches["Match"]["Home"]; ?></h1>
+        <h1>LBA</h1>
+        <h2>Risultati 17 giornata:</h2>
+        <ul><?php
+            // attraverso un ciclo for stampo gli array all'interno dell'array $matches
+            for ($i=0; $i < count($matches); $i++) {
+                echo "<li>" . $matches[$i]["Home"] . " - " . $matches[$i]["Visitors"] . " | " . $matches[$i]["Risultato"] . "</li>";
+            };
+        ?></ul>
     </body>
 </html>
