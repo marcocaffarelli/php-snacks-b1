@@ -54,6 +54,12 @@ conosciamo nella documentazione) che:
 Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 */
 
+$name = $_GET["name"];
+$email = $_GET["email"];
+$age = $_GET["age"];
+
+//var_dump($name, $email, $age);
+
 
 ?>
 
@@ -65,6 +71,7 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
         <title>Php-snacks-b1</title>
     </head>
     <body>
+        <!-- ESERCIZIO NUMERO 1 -->
         <h1>LBA</h1>
         <h2>Risultati 17 giornata:</h2>
         <ul><?php
@@ -73,5 +80,8 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
                 echo "<li>" . $matches[$i]["Home"] . " - " . $matches[$i]["Visitors"] . " | " . $matches[$i]["Risultato"] . "</li>";
             };
         ?></ul>
+
+        <!-- ESERCIZIO NUMERO 2 -->
+        <h2></h2>
     </body>
 </html>
