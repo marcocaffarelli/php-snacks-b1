@@ -57,12 +57,17 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 $name = $_GET["name"];
 $email = $_GET["email"];
 $age = $_GET["age"];
-
 //var_dump($name, $email, $age);
-if (strlen($name) > 3) {
-    echo ("true");
+
+
+/*
+strlen($name) > 3 = se il nome è formato da più di 3 lettere
+strpos($email, "@") !== false && strpos($email, ".") !== false = l'email include una chiocciola e un punto
+*/
+if (strlen($name) > 3 && strpos($email, "@") !== false && strpos($email, ".") !== false) {
+    echo ("Accesso riuscito");
 } else {
-    echo ("false");
+    echo ("Accesso negato");
 };
 
 ?>
